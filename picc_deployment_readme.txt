@@ -7,3 +7,4 @@ picctravel.com deployment
        fileinfo, gd/gd2, mbstring, openssl, pdo_sqlite, pdo_mysql
 3. website root directory is picctravel.com/public and default entry is public/index.php
 4. make sure web server configured well to point correct location at step #3
+5. write permission to storage folder required during web server runtime 
