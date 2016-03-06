@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-@include('partial.slider',['images'=>['/images/slider/vipprograms1.jpg','/images/slider/vipprograms2.jpg','/images/slider/vipprograms3.jpg'],'captions'=>['尊享私人礼宾服务','私人驾驶服务','独家高尔夫球场使用']])
+@include('partial.slider',['images'=>['/images/slider/vipprograms1.jpg','/images/slider/vipprograms2.jpg','/images/slider/vipprograms3.jpg'],'captions'=>['头等舱飞行体验','贴心接送机服务','尊享私人飞行体验']])
 <div id="vip_program_content" class="page_container">
   <div class="ui grid container">
      <div class="ui column">
@@ -14,7 +14,7 @@
        </h2>
        <div class="ui divider"></div>
        <p>
-         PICC VIP之旅为您准备了大量假日活动项目，将让您的每次旅行都值得回味！无论您计划全家出行、还是打造一个浪漫的旅程，CMBVIP之旅都可以提供您所需要的旅游观光特价产品!请按照目的地随意浏览我们海量特价产品，使你们的旅程丰满充实。无论您是要在纽约或香港探秘繁华，还是要去巴黎或伦敦感受其文化底蕴，抑或去普吉岛和芭提雅享受海天之乐，CMBVIP之旅都知道如何帮您打造完美假日！
+         PICC VIP之旅为您准备了大量假日活动项目，将让您的每次旅行都值得回味！无论您计划全家出行、还是打造一个浪漫的旅程，PICC VIP之旅都可以提供您所需要的旅游观光特价产品!请按照目的地随意浏览我们海量特价产品，使你们的旅程丰满充实。无论您是要在纽约或香港探秘繁华，还是要去巴黎或伦敦感受其文化底蕴，抑或去普吉岛和芭提雅享受海天之乐，PICC VIP之旅都知道如何帮您打造完美假日！
        </p>
        <h2 class="ui {{config('app.primary_color')}} header">
          PICC VIP 之旅会员专享计划
