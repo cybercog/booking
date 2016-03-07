@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-@include('partial.slider',['images'=>['/images/slider/vipprograms1.jpg','/images/slider/vipprograms2.jpg','/images/slider/vipprograms3.jpg'],'captions'=>['头等舱飞行体验','贴心接送机服务','尊享私人飞行体验']])
+@include('partial.slider',['images'=>['/images/slider/vipprograms1.jpg','/images/slider/vipprograms2.jpg','/images/slider/vipprograms3.jpg'],'captions'=>['无与伦比的飞行体验','全天候私人接送服务','尊享私人飞行体验']])
 <div id="vip_program_content" class="page_container">
   <div class="ui grid container">
      <div class="ui column">
