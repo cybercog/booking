@@ -200,7 +200,7 @@ document.getElementById('mm').style.width = screenW+"px";
 /* This service offers a REST API allowing to get a visitor IP address and to query location information from any IP address.
 It outputs JSON-encoded IP geolocation data, and supports both JSON and JSONP. */
 
-var subUrl= "http://ct-stg.secure-reservation.com/ctReservations/";
+var subUrl= "http://picc-stg.secure-reservation.com/piccReservations/";
 
 $(document).ready(function() {
 	$.ajax({
@@ -225,7 +225,7 @@ $(document).ready(function() {
 
 
 <script>
-var subURL="../../";
+var subURL=subUrl;
 $(document).ready(function() {
 	affiliateTimer();
 try{
