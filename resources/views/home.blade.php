@@ -9,7 +9,9 @@
         <div class="eleven wide column">
             <h1 class="ui left floated {{config('app.primary_color')}} header">{{ trans('home.hot_place') }}</h1>
             <div class="ui clearing divider"></div>
-            <div id="home-gallery"></div>
+            <div id="home-gallery">
+                <div class="ui active centered inline loader"></div>
+            </div>
         </div>
         <div class="five wide column" style="padding-left:5em;">
             <h1 class="ui left floated {{config('app.primary_color')}} header">{{ trans('home.partner') }}</h1>

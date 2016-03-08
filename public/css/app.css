@@ -31,6 +31,10 @@
     margin-top: 5rem;
 }
 
+#home-gallery .loader {
+  margin-top:5em;
+}
+
 #home-partner {
     padding-top: 4px;
 }
