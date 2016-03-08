@@ -12,9 +12,6 @@ class VipProgramController extends Controller
 {
     public function index()
     {
-      $cacheKey = 'vipprogram.'.$this->lang;
-      return Cache::remember($cacheKey,120,function(){
-        return view('vipprogram.'.$this->lang.'.index')->render();
-      });
+        return view('vipprogram.'.$this->lang.'.index');
     }
 }
