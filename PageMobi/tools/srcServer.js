@@ -16,6 +16,7 @@ const bundler = webpack(webpackConfig);
 
 // Run Browsersync and use middleware for Hot Module Replacement
 browserSync({
+  host:'0.0.0.0',
   server: {
     baseDir: 'src',
 

@@ -10,7 +10,7 @@ import HomePage from './containers/HomePage.js';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
-    <Route path="about" component={AboutPage}/>
-    <Route path="*" component={NotFoundPage} />
+    <Route path="hotels" component={AboutPage}/>
+    <Route path="flights" component={NotFoundPage} />
   </Route>
 );

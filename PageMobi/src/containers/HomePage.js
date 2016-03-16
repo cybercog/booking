@@ -6,7 +6,7 @@ class HomePage extends React.Component {
   render(){
     return (
         <div className="menu-bar">
-            <MenuBar selected="home" />
+        
         </div>
     );
   }

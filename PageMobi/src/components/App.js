@@ -1,18 +1,34 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
 
-const App = (props) => {
-  return (
-    <div>
-      <IndexLink to="/">Home</IndexLink> | <Link to="/About">About</Link>
-      <br/>
-      {props.children}
-    </div>
-  );
-};
+import {Container} from 'amazeui-touch';
+import Header from './Header';
+import FootBar from './FootBar';
 
-App.propTypes = {
-  children: PropTypes.element
-};
+class App extends React.Component{
+
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    let {
+        location,
+        params,
+        children,
+        ...props
+        } = this.props;
+
+    return (
+      <Container direction="column">
+        <Header/>
+        {children}
+        <FootBar location={location} params={params}/>
+      </Container>
+    );
+  }
+}
+
+App.propTypes = { children: PropTypes.element };
 
 export default App;
