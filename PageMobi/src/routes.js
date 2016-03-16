@@ -5,10 +5,11 @@ import App from './components/App';
 import FuelSavingsPage from './containers/FuelSavingsPage';
 import AboutPage from './components/AboutPage.js';
 import NotFoundPage from './components/NotFoundPage.js';
+import HomePage from './containers/HomePage.js';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={FuelSavingsPage} />
+    <IndexRoute component={HomePage} />
     <Route path="about" component={AboutPage}/>
     <Route path="*" component={NotFoundPage} />
   </Route>
