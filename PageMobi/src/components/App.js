@@ -19,13 +19,13 @@ class App extends React.Component{
         ...props
         } = this.props;
 
-    let transition = children.props.transition || 'sfr';
+    let transition = children.props.transition || 'rfl';
 
     return (
       <Container direction="column">
         <Header/>
         <Container transition={transition}>
-          {React.cloneElement(children, {key: location.key})}
+          {children}
         </Container>
         <FootBar location={location} params={params}/>
       </Container>
