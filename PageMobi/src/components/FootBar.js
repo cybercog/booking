@@ -28,7 +28,7 @@ class FootBar extends React.Component{
               component={Link}
               icon="info"
               title="酒店"
-              badge='β'
+              badge="4"
               selected={location.pathname === '/hotels'}
               to="/hotels"
             />
@@ -36,7 +36,7 @@ class FootBar extends React.Component{
               component={Link}
               icon="info"
               title="航班"
-              badge='β'
+              badge="2"
               selected={location.pathname === '/flights'}
               to="/flights"
             />

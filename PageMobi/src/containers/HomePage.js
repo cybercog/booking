@@ -1,41 +1,34 @@
 import React from 'react';
 import {
   Container,
-  NavBar,
-  Group
+  Slider
 } from 'amazeui-touch';
+
+//test data
+const sliderIntance = (
+  <Slider>
+    <Slider.Item>
+      <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" />
+    </Slider.Item>
+    <Slider.Item>
+      <img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" />
+    </Slider.Item>
+    <Slider.Item>
+      <img src="http://s.amazeui.org/media/i/demos/bing-3.jpg" />
+    </Slider.Item>
+    <Slider.Item>
+      <img src="http://s.amazeui.org/media/i/demos/bing-4.jpg" />
+    </Slider.Item>
+  </Slider>
+);
+//
 
 class HomePage extends React.Component {
 
   render(){
     return (
       <Container {...this.props}>
-        <Group
-          header="关于 Amaze UI Touch"
-          footer="ver __VERSION__"
-        >
-          <p>Amaze UI Touch 是基于 React.js 的移动端 Web 组件库。</p>
-        </Group>
-        <Group
-          header="开发人员"
-        >
-          <ul>
-            <li><a href="https://github.com/minwe" target="_blank">@minwe</a>
-            </li>
-            <li><a href="https://github.com/huangzhipeng" target="_blank">@huangzhipeng</a>
-            </li>
-          </ul>
-        </Group>
-        <Group
-          header="鸣谢"
-        >
-          <p>感谢所有参与、关注 Amaze UI 的用户。</p>
-        </Group>
-        <Group
-          header="版权"
-        >
-          <p>MIT © 2015 AllMobilize Inc.</p>
-        </Group>
+        {sliderIntance}
       </Container>
     );
   }
