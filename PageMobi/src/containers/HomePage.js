@@ -29,6 +29,7 @@ class HomePage extends React.Component {
     return (
       <Container {...this.props}>
         {sliderIntance}
+        <h2>hahahaha</h2>
       </Container>
     );
   }

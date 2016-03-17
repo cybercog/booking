@@ -49,13 +49,34 @@ const getEntry = function (env) {
 };
 
 const getLoaders = function (env) {
-  const loaders = [{ test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel', 'eslint'] }];
+  const loaders = [
+    {
+      test: /\.js$/,
+      include: path.join(__dirname, 'src'),
+      loaders: ['babel', 'eslint']
+    },
+    {
+      test: /\.(png|jpg|gif|woff|woff2)$/,
+      loader: 'url-loader?limit=8192'
+    },
+    {
+      test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      loader: "url-loader?limit=10000&minetype=application/font-woff"
+    },
+    {
+      test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      loader: "file-loader"
+    }
+  ];
 
   if (env === productionEnvironment ) {
     // generate separate physical stylesheet for production build using ExtractTextPlugin. This provides separate caching and avoids a flash of unstyled content on load.
     loaders.push({test: /(\.css|\.scss)$/, loader: ExtractTextPlugin.extract("css?sourceMap!sass?sourceMap")});
   } else {
-    loaders.push({test: /(\.css|\.scss)$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap']});
+    loaders.push({
+      test: /(\.css|\.scss)$/,
+      loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+    });
   }
 
   return loaders;
@@ -70,7 +91,7 @@ function getConfig(env) {
     target: env === testEnvironment ? 'node' : 'web', // necessary per https://webpack.github.io/docs/testing.html#compile-and-test
     output: {
       path: __dirname + '/dist', // Note: Physical files are only output by the production build task `npm run build`.
-      publicPath: '',
+      publicPath: 'http://localhost:3000/',
       filename: 'bundle.js'
     },
     plugins: getPlugins(env),
