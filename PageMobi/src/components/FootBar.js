@@ -14,7 +14,7 @@ class FootBar extends React.Component{
       } = this.props;
 
     return (
-      <TabBar
+      <TabBar className="footer-bar"
             amStyle="primary"
           >
             <TabBar.Item
