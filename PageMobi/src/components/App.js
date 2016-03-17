@@ -19,10 +19,14 @@ class App extends React.Component{
         ...props
         } = this.props;
 
+    let transition = children.props.transition || 'sfr';
+
     return (
       <Container direction="column">
         <Header/>
-        {children}
+        <Container transition={transition}>
+          {React.cloneElement(children, {key: location.key})}
+        </Container>
         <FootBar location={location} params={params}/>
       </Container>
     );

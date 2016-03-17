@@ -14,12 +14,12 @@ class FootBar extends React.Component{
       } = this.props;
 
     return (
-      <TabBar className="footer-bar"
+      <TabBar
             amStyle="primary"
           >
             <TabBar.Item
               component={Link}
-              icon="list"
+              icon="home"
               title="首页"
               selected={location.pathname === '/'}
               to="/"
