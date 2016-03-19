@@ -4,6 +4,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import publicPath from './tools/publicPath';
 
 const developmentEnvironment = 'development' ;
 const productionEnvironment = 'production';
@@ -91,7 +92,7 @@ function getConfig(env) {
     target: env === testEnvironment ? 'node' : 'web', // necessary per https://webpack.github.io/docs/testing.html#compile-and-test
     output: {
       path: __dirname + '/dist', // Note: Physical files are only output by the production build task `npm run build`.
-      publicPath: 'http://localhost:3000/',
+      publicPath: publicPath,
       filename: 'bundle.js'
     },
     plugins: getPlugins(env),
